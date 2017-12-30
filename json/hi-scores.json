@@ -1,0 +1,13 @@
+{
+  "list": {
+    "maxLength": 10,
+    "list": [
+      {
+        "name": "Dacrol",
+        "rounds": 4,
+        "⚙": "Human"
+      }
+    ],
+    "⚙": "HighscoreList"
+  }
+}
