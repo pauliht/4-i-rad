@@ -1,4 +1,5 @@
 let game = new Game();
-if (location.pathname == '/play.html'){
+var url = window.location.pathname
+if (url.substr(url.lastIndexOf('/')) == '/play.html'){
   game.board.nextPlayer(); // Start game
 }
