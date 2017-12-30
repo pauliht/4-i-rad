@@ -111,7 +111,7 @@ function loadPlayers() {
         localStorage.setItem('player1Type', "human");
         localStorage.setItem('player2Type', "human");
         return false; // Not ready to start
-    } else if (url == '/player.html') {
+    } else if (url.substr(url.lastIndexOf('/')) == '/player.html') {
       localStorage.clear();
     $(document).on('click', '.startGame', function() {
         let val1 = $('#playerName1').val() || 'Player 1';
@@ -121,7 +121,7 @@ function loadPlayers() {
 
     });
     return false; // Still not ready to start
-    } else if (url == "/play.html") {
+    } else if (url.substr(url.lastIndexOf('/')) == "/play.html") {
     //If play.html, get player names and types and render to page
     // TODO: clear after loading
     let name1 = localStorage.getItem('player1Name') || 'Player 1';
