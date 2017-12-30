@@ -102,12 +102,12 @@ $(document).on("click", "#switchButton2", function() {
     localStorage.setItem('player2Type', value);
 });
 
-let url = location.pathname;
+var url = window.location.pathname;
 
 // TODO: Lägg till check med pushstate eller något för att se om man kom från player.html, annars cleara localstorage så att inte name/type hämtas från gammal session
 function loadPlayers() {
     //Default values for player type is human, only if page is not play.html
-    if (!(url == '/play.html' || url == '/player.html')) {
+    if (!(url.substr(url.lastIndexOf('/')) == '/play.html' || url.substr(url.lastIndexOf('/')) == '/player.html')) {
         localStorage.setItem('player1Type', "human");
         localStorage.setItem('player2Type', "human");
         return false; // Not ready to start
